@@ -20,7 +20,7 @@ import modelo.Productos;
  * @author DAW2
  */
 public class Servlet extends HttpServlet {
-
+public int veces;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -34,7 +34,9 @@ public class Servlet extends HttpServlet {
             throws ServletException, IOException {
                        
             /* TODO output your page here. You may use following sample code. */
+           // Crud.destroyProducto(2);
             String op = "listar";
+            Crud.insertaProducto();
             if (request.getParameter("op")!=null ){
                 op=request.getParameter("op");
             }
@@ -44,7 +46,9 @@ public class Servlet extends HttpServlet {
             request.getRequestDispatcher("listar.jsp").forward(request,response);
             
              }
-             
+            
+          
+          Crud.destroyProducto(11);
 
 
         

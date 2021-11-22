@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
-        <h1>Listado de productos</h1>
+        <h1>Listado de productos por Nombre</h1>
         <%
             List<Productos> listaProductos = ( List<Productos> )request.getAttribute("listado");
          %>
@@ -24,7 +24,7 @@
          <tr>
              <td><%=p.getNombre() %></td>
              <td><%=p.getPrecio() %></td>
-             <td><%=p.getCategoria() %> </td>
+             <td><%=p.getId() %> </td>
              <td><a href="Servlet?op=borrar&id=<%=p.getId() %>">Borrar</a>
          </tr>
          <%}%>
